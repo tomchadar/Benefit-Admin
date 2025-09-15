@@ -1,0 +1,105 @@
+type BenefitUser @model @auth(rules: [{ allow: public }]) {
+  emailAddress: String! @primaryKey
+  Employer: Employer @hasOne
+  employerId: String! @index(name: "byEmployer", queryField: "userByBenefitEmployer")
+  createdAt: AWSDateTime
+  updatedAt: AWSDateTime
+}
+
+type Transaction @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  bonusoffered: Float
+  Employee: Employee @hasOne
+  employeeId: String! @index(name: "byEmployee", queryField: "transactionByEmployeeId")
+  Employer: Employer @hasOne
+  employerId: String! @index(name: "byEmployeer", queryField: "transactionByEmployerId")
+  requesteddate: AWSDate
+  requestedamount: Float
+  disbursementdate: AWSDate
+  disbursementamount: Float
+  disbursementmethod: String
+  benefitremitdate: AWSDate
+  actionrequired: String
+  invoices3filekey: String
+  createdAt: AWSDateTime
+  updatedAt: AWSDateTime
+}
+
+type EmployeeBonus @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  amount: Float
+  startdate: AWSDate
+  enddate: AWSDate
+  vestingperiod: Int
+  vestingfreq: Int
+  vestingcliff: Int
+  plantype: String
+  activeamount: Float
+  amounttovest: Float
+  forgivenamount: Float
+  interestrate: Float
+  PlanStatus: PlanStatus @hasOne
+  docs3filekey: String
+  Employee: Employee @hasOne
+  employeeId: String! @index(name: "byEmployee", queryField: "bonusByEmployee")
+  Employer: Employer @hasOne
+  employerId: String! @index(name: "byEmployeer", queryField: "bonusByEmployerId")
+  # { year, T4Code36Amt, T4Code40Amt }
+  taxBenefit: AWSJSON
+  createdAt: AWSDateTime
+  updatedAt: AWSDateTime
+}
+
+type Address @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  line1: String
+  line2: String
+  city: String
+  provincestate: String
+  country: String
+  postalcode: String
+  createdAt: AWSDateTime
+  updatedAt: AWSDateTime
+}
+
+type Employer @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  name: String
+  interestrate: Float
+  Address: Address @hasOne
+  createdAt: AWSDateTime
+  updatedAt: AWSDateTime
+}
+
+type PlanStatus @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  status: String!
+  actions: String!
+  createdAt: AWSDateTime
+  updatedAt: AWSDateTime
+}
+
+type Department @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  name: String!
+  createdAt: AWSDateTime
+  updatedAt: AWSDateTime
+}
+
+type Employee @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  employeeid: String!
+  firstname: String!
+  lastname: String!
+  uei: String
+  imgKey: String
+  imgIdentityId: String
+  startdate: AWSDate!
+  Department: Department @hasOne
+  terminationdate: AWSDate
+  Address: Address @hasOne
+  Employer: Employer @hasOne
+  emailAddress: String
+  createdAt: AWSDateTime
+  updatedAt: AWSDateTime
+}

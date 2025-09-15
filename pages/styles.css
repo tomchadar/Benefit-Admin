@@ -1,0 +1,58 @@
+@import "@aws-amplify/ui-react/styles.css";
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+
+:root {
+  --main-benefit-blue-color: #1976D2;
+  --amplify-fonts-default-variable: "Open Sans";
+  --amplify-fonts-default-static: "Open Sans";
+  --amplify-colors-brand-primary-10: var(--amplify-colors-blue-10) !important;
+  --amplify-colors-brand-primary-20: var(--amplify-colors-blue-20) !important;
+  --amplify-colors-brand-primary-40: var(--amplify-colors-blue-40) !important;
+  --amplify-colors-brand-primary-60: var(--amplify-colors-blue-60) !important;
+  /* update --amplify-colors-brand-primary-80 to change button color  */
+  --amplify-colors-brand-primary-80: var(--main-benefit-blue-color) !important;
+  --amplify-colors-brand-primary-90: var(--amplify-colors-blue-90) !important;
+  /* field border color  */
+  --amplify-colors-brand-primary-100: var(--main-benefit-blue-color) !important;
+  --amplify-colors-brand-secondary-10: var(--amplify-colors-neutral-10) !important;
+  --amplify-colors-brand-secondary-20: var(--amplify-colors-neutral-20) !important;
+  --amplify-colors-brand-secondary-40: var(--amplify-colors-neutral-40) !important;
+  --amplify-colors-brand-secondary-60: var(--amplify-colors-neutral-60) !important;
+  --amplify-colors-brand-secondary-80: var(--amplify-colors-neutral-80) !important;
+  --amplify-colors-brand-secondary-90: var(--amplify-colors-neutral-90) !important;
+  --amplify-colors-brand-secondary-100: var(--amplify-colors-neutral-100) !important;
+  --amplify-colors-radii-small: 0 !important;
+  --amplify-colors-radii-medium: 2px !important;
+  --amplify-colors-radii-large: 4px !important;
+  --amplify-colors-border-primary: var(--amplify-colors-neutral-40) !important;
+  --amplify-colors-border-secondary: var(--amplify-colors-neutral-20) !important;
+  --amplify-colors-border-tertiary: var(--amplify-colors-neutral-10) !important;
+  /* seconary tab background color  */
+  --amplify-colors-background-secondary: var(--amplify-colors-brand-primary-10) !important;
+  --amplify-components-tabs-item-border-color: var(--amplify-colors-neutral-60) !important;
+
+  --amplify-radii-small: 0 !important;
+  --amplify-radii-medium: 0 !important;
+  --amplify-radii-large: 0 !important;
+  --amplify-space-small: 1rem !important;
+  --amplify-space-medium: 1.5rem !important;
+  --amplify-space-large: 2rem !important;
+  --amplify-border-widths-small: 2px !important;
+  --amplify-border-widths-medium: 4px !important;
+  --amplify-border-widths-large: 8px !important;
+}
+
+
+.custom-upload-button{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: rgb(213, 87, 96);
+  color: white;
+  padding: 0.5rem;
+  font-family: sans-serif;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}

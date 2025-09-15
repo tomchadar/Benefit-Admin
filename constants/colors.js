@@ -1,0 +1,6 @@
+export const drawerBackground = '#140100'
+export const drawerFontColor = '#D2AFAE'
+export const drawerFontColorActive = '#FF635E'
+export const helpBorderColor = '#CED4DA'
+export const grayText = '#868E96'
+export const primary = '#FF635E'

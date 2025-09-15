@@ -1,0 +1,29 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-benefitbackendv2-dev-125905-authRole",
+      "UnauthRoleArn": "arn:aws:iam::545073464660:role/amplify-benefitbackendv2-dev-125905-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::545073464660:role/amplify-benefitbackendv2-dev-125905-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-benefitbackendv2-dev-125905-deployment",
+      "UnauthRoleName": "amplify-benefitbackendv2-dev-125905-unauthRole",
+      "StackName": "amplify-benefitbackendv2-dev-125905",
+      "StackId": "arn:aws:cloudformation:us-east-1:545073464660:stack/amplify-benefitbackendv2-dev-125905/ff007600-c71e-11ed-9ab8-0eecca69a745",
+      "AmplifyAppId": "d2hzaxwbq0qai7"
+    },
+    "categories": {
+      "function": {
+        "S3Triggerff6d1df1": {
+          "deploymentBucketName": "amplify-benefitbackendv2-dev-125905-deployment",
+          "s3Key": "amplify-builds/S3Triggerff6d1df1-5946483276345474594f-build.zip"
+        }
+      },
+      "auth": {
+        "benefitbackendv2": {}
+      },
+      "storage": {
+        "benefitstorage": {}
+      }
+    }
+  }
+}
